@@ -195,13 +195,13 @@ else{
 }
 
 let init = () => {
-    getVideoDurationInSeconds('./audiofiles/audiofile.webm').then((duration) => {
+    getVideoDurationInSeconds('./audiofiles/shadowrealm.opus').then((duration) => {
         firstClipDuration = (duration * 1000) + 100;
     })
-    getVideoDurationInSeconds('./audiofiles/objection.webm').then((duration) => {
+    getVideoDurationInSeconds('./audiofiles/objection.opus').then((duration) => {
         secondClipDuration = (duration * 1000) + 100;
     })
-    getVideoDurationInSeconds('./audiofiles/triggered-my-trap-card.mp3').then((duration) => {
+    getVideoDurationInSeconds('./audiofiles/trapcard.mp3').then((duration) => {
         thirdClipDuration = (duration * 1000) + 100;
 
     })
