@@ -64,8 +64,14 @@ client.on('message', message => {
             return;
         }
 
-        let member = message.mentions.members.first()
-        let user = member.user;
+        let member;
+
+        try {
+            member = message.mentions.members.first()
+          } catch (error) {
+            console.log("Someone entered the command without a user...")
+            console.error(error);
+          }
         let temp = member.voice.channel;
 
         counterTarget = message.guild.member(message.author);
